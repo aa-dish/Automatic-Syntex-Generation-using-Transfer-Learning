@@ -2,7 +2,7 @@
 Natural Language to SysML Code Generation Task
 
 
-This is my master's research topic about find and implement the state-of-the art method for natural language to SysML code generation task, I've developed theTransformer-based Model with the help of transfering the knowledge of pre-trained Large Language Models (LLMs): BERT and  CodeBERT. I achieved the average test loss of 0.16 and the BLEU Score of 0.85 and CodeBLEU score of 0.97. 
+This is my master's research topic about find and implement the state-of-the art method for natural language to SysML (Systems Modeling Language) code generation task, I've developed the Transformer-based Model with the help of transfering the knowledge of pre-trained Large Language Models (LLMs): BERT and  CodeBERT. I achieved the average test loss of 0.16 and the BLEU Score of 0.85 and CodeBLEU score of 0.97. 
 
 
 Number of Epochs: 55 (For the exact results mentioned here)
