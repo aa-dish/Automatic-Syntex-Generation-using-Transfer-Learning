@@ -12,8 +12,6 @@ Batch Size: 32 (For the exact results mentioned here)
 Below I have attached my Encode-Decoder Model Architecture, which performed well
 ![Model Architecture](https://github.com/aa-dish/Automatic-Syntex-Generation-using-Transfer-Learning/assets/53014490/be8655b7-4d72-4236-8583-2226620eae8d)
 
-**Training Vs. Validation Graph**
-![BERT-CodeBERT_V4_32_the_best (1)](https://github.com/aa-dish/Automatic-Syntex-Generation-using-Transfer-Learning/assets/53014490/2cd8ce20-f823-4fad-be33-ce3f4ac86960)
 
 **Execution steps:**
 1. Install the all requirements mentioned here
