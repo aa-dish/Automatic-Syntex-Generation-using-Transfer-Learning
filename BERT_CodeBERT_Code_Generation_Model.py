@@ -1,14 +1,14 @@
+import os
 import openpyxl
 import pandas as pd
 from sklearn.model_selection import train_test_split
 from torch.utils.data import Dataset, DataLoader
 import torch
 import torch.nn as nn
-from torch.utils.data import DataLoader, Dataset
 from transformers import BertModel, BertTokenizer, RobertaTokenizer, RobertaForTokenClassification, AdamW, BertForTokenClassification
 from tqdm import tqdm
 import matplotlib.pyplot as plt
-import os
+
 
 # Load the Excel file
 wb = openpyxl.load_workbook("/scratch/adesai/thesis2/Project/src/data/Dataset.xlsx")
@@ -48,7 +48,6 @@ train_df.to_csv('train_data.csv', index=False)
 test_df.to_csv('test_data.csv', index=False)
 validation_df.to_csv('validation_data.csv', index=False)
 
-# My Final Model
 # Load the tokenizers
 tokenizer_bert = BertTokenizer.from_pretrained('bert-base-uncased')
 tokenizer_codebert = RobertaTokenizer.from_pretrained('microsoft/codebert-base')
@@ -101,7 +100,7 @@ validation_dataloader = DataLoader(validation_dataset, batch_size=32, shuffle=Fa
 bert_encoder = BertModel.from_pretrained('bert-base-uncased')
 bert_encoder.to(device)
 
-# Define the CodeBERT decoder (you may need to fine-tune CodeBERT or implement a custom decoder)
+# Define the CodeBERT decoder
 codebert_decoder = RobertaForTokenClassification.from_pretrained('microsoft/codebert-base', num_labels=len(tokenizer_codebert.get_vocab()))
 codebert_decoder.to(device)
 
@@ -235,7 +234,7 @@ plt.ylabel('Loss')
 plt.legend()
 plt.show()
 
-# Modify the testing loop
+# Testing loop
 model.eval()
 test_outputs = []
 test_loss = 0.0
