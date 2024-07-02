@@ -1,0 +1,16 @@
+# General Dependencies
+pandas
+openpyxl
+tqdm
+matplotlib
+
+# PyTorch and Transformers
+torch
+torchvision
+torchaudio
+
+# Hugging Face Transformers
+transformers
+
+# Scikit-Learn
+scikit-learn
